@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "booknook";
+  default: true;
+  color-scheme: light;
+  --color-base-100: #f7f9f8;
+  --color-base-200: #eaf0ee;
+  --color-base-300: #d5e0dc;
+  --color-base-content: #13231f;
+  --color-primary: #0f5c4d;
+  --color-primary-content: #f2f8f6;
+  --color-secondary: #1c2f5a;
+  --color-secondary-content: #eef2fb;
+  --color-accent: #e9a23b;
+  --color-accent-content: #2b1c02;
+  --color-neutral: #13231f;
+  --color-neutral-content: #eaf0ee;
+  --color-info: #2b6cb0;
+  --color-success: #2f855a;
+  --color-warning: #d69e2e;
+  --color-error: #c53030;
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+}
+
+@plugin "daisyui/theme" {
+  name: "booknook-dark";
+  color-scheme: dark;
+  --color-base-100: #0e1815;
+  --color-base-200: #14221e;
+  --color-base-300: #1f332d;
+  --color-base-content: #e4eeea;
+  --color-primary: #4fc3a8;
+  --color-primary-content: #06211b;
+  --color-secondary: #8aa4e6;
+  --color-secondary-content: #0b1530;
+  --color-accent: #f0b04e;
+  --color-accent-content: #2b1c02;
+  --color-neutral: #1f332d;
+  --color-neutral-content: #e4eeea;
+  --color-info: #63b3ed;
+  --color-success: #68d391;
+  --color-warning: #f6c453;
+  --color-error: #fc8181;
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+}
+
+:root { --font-display: var(--font-bricolage), system-ui, sans-serif; --font-body: var(--font-figtree), system-ui, sans-serif; }
+body { font-family: var(--font-body); }
+h1, h2, h3, .font-display { font-family: var(--font-display); letter-spacing: -0.02em; }
+
+/* consistent heading + button + card styles */
+.section-title { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.15; }
+.section-sub { max-width: 40rem; opacity: 0.75; }
+.container-x { width: 100%; max-width: 76rem; margin-inline: auto; padding-inline: 1.25rem; }
+.catalog-card { border: 1px solid var(--color-base-300); background: var(--color-base-100); border-radius: var(--radius-box); transition: transform .2s, box-shadow .2s; }
+.catalog-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px -14px rgb(0 0 0 / .35); }
+.stamp { border: 2px dashed var(--color-accent); color: var(--color-accent); border-radius: .5rem; transform: rotate(-4deg); }
+.ruled { background-image: repeating-linear-gradient(transparent 0 31px, color-mix(in oklab, var(--color-base-content) 10%, transparent) 31px 32px); }
+.swiper-pagination-bullet { background: #fff !important; opacity: .6; }
+.swiper-pagination-bullet-active { background: var(--color-accent) !important; opacity: 1; }
+.swiper-button-next, .swiper-button-prev { color: #fff !important; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
